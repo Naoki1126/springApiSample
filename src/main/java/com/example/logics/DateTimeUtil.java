@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DateTimeUtil {
-	public LocalDateTime getCurrentDateTime() {
+	public static LocalDateTime getCurrentDateTime() {
 		return LocalDateTime.now();
 	}
 }
