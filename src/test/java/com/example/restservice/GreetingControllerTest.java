@@ -1,5 +1,6 @@
 package com.example.restservice;
 
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 import java.nio.charset.StandardCharsets;
@@ -18,17 +19,20 @@ import com.example.logics.DateTimeUtil;
 @AutoConfigureMockMvc
 public class GreetingControllerTest {
 
+	
 	@Autowired
 	MockMvc mockMvc;
-
+	
 	@MockBean
 	DateTimeUtil mockDateTimeUtil;
-
+	
+	
+	
 	@Test
 	void case001() throws Exception {
 		
 		// モックの準備
-		when(mockDateTimeUtil.getCurrentDateTime().thenReturn(LocalDateTime.of(2022,10, 1, 00, 00, 00);
+		when(mockDateTimeUtil.getCurrentDateTime()).thenReturn(LocalDateTime.of(2022,10, 1, 00, 00, 00));
 		
 		String result = mockMvc.perform(get("/greeting")).andReturn().getResponse().getContentAsString(StandardCharsets.UTF_8);
 		
