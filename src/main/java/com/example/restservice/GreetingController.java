@@ -43,8 +43,8 @@ public class GreetingController extends BaseController {
 	
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") String name) {
-		System.out.println("Configurationで定義されているBean:" + diSample.getAge());
-		System.out.println("Configurationで定義されているBean:" + diSample.getName());
+		System.out.println("Bean定義場所:" + diSample.getName());
+		System.out.println("Bean 年齢" + diSample.getAge());
 		
 		DiSample notBeanDiSample = newDiSample("Greeting Contoroller", 111);
 		System.out.println("newしたDiSample: " + notBeanDiSample.getName());

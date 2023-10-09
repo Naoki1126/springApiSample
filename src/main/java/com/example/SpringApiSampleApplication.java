@@ -3,9 +3,6 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import com.example.demo.DiSample;
 
 @SpringBootApplication
 public class SpringApiSampleApplication {
@@ -17,10 +14,11 @@ public class SpringApiSampleApplication {
 		SpringApplication.run(SpringApiSampleApplication.class, args);
 	}
 
-    @Bean
+	// SampleLogicにてBean定義するためコメントアウト
+//    @Bean
     // Configration　クラスにてBeanに追加
-    DiSample createDiSample() {
-		return new DiSample(NAME, AGE);
-	}
+//    DiSample createDiSample() {
+//		return new DiSample(NAME, AGE);
+//	}
 }
 
