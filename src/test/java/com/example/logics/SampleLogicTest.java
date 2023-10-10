@@ -66,7 +66,6 @@ public class SampleLogicTest {
 			mock.when(() -> sampleLogic.getYamadaName()).thenReturn("Tanaka Takashi");
 			//　対象メソッド
 			System.out.println(sampleLogic.getYamadaName());
-			
 			// 対象外メソッド
 			// 対象外メソッドの書き換えはされない
 			System.out.println(sampleLogic.getYamadaAge());
