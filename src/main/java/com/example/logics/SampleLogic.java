@@ -37,4 +37,17 @@ public class SampleLogic {
 		return new DiSample(NAME, AGE);
 	}
 	
+	
+	public static String getYamadaName() {
+		return "Yamada Taro";
+	}
+	
+	public static int getYamadaAge() {
+		return 55;
+	}
+	
+	public static String getYamadaProfile() {
+		return "名前は" + getYamadaName() + ", 年齢は" + getYamadaAge();
+	}
+	
 }
