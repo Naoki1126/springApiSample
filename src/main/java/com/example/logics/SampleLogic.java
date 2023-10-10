@@ -27,15 +27,13 @@ public class SampleLogic {
 		return "数字は10未満です";
 	}
 	
-	public DiSample getDiSampleInfomation() {
+	public String getDiSampleInfomation() {
 		DiSample ds = createDiSample();
-		System.out.println("SampleLogicのDiSample.Name: " + ds.getName());
-		System.out.println("SampleLogicのDiSample.Age: " + ds.getAge());
-		return ds;
+		return ds.getProfile();
 	}
 	
-	@Bean
-	private DiSample createDiSample() {
+	@Bean("Junit-test")
+	public DiSample createDiSample() {
 		return new DiSample(NAME, AGE);
 	}
 	

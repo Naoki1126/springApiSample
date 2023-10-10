@@ -24,4 +24,8 @@ public class DiSample {
 		this.age = age;
 	}
 	
+	public String getProfile() {
+		return "Beanの生成場所は" + this.name + "年齢は" + this.age;
+	}
+	
 }

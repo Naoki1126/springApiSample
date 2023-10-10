@@ -35,14 +35,16 @@ public class GreetingController extends BaseController {
 //		this.diSample = diSample;
 //	}
 	
-	@Autowired
+//	@Autowired
 	// Configrationで定義しているBeanがInjectionされる
-	public void setGreetingContoroller(DiSample diSample) {
-		this.diSample = diSample;
-	}
+//	public void setGreetingContoroller(DiSample diSample) {
+//		this.diSample = diSample;
+//	}
 	
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") String name) {
+		DiSample  diSample = newDiSample("aaaaa", 22222);
+		
 		System.out.println("Bean定義場所:" + diSample.getName());
 		System.out.println("Bean 年齢" + diSample.getAge());
 		

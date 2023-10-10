@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringApiSampleApplication {
 	
-	private final String NAME = "TestDiSampleName";
+	private final String NAME = "";
 	private final int AGE = 21;
 
 	public static void main(String[] args) {
