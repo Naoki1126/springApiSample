@@ -71,6 +71,7 @@ public class SampleLogicTest {
 			// 対象外メソッドの書き換えはされない
 			System.out.println(sampleLogic.getYamadaAge());
 		}
+		// ブロック外は適用されない
 		System.out.println(SampleLogic.getYamadaProfile());
 		assertEquals("Yamada Taro", sampleLogic.getYamadaName());
 
