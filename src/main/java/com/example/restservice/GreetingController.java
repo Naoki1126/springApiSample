@@ -3,6 +3,7 @@ package com.example.restservice;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +24,18 @@ public class GreetingController extends BaseController {
 	@Autowired
 	private DateTimeUtil DateTimeUtil; 
 	
+	// application.ymlから値を取得
+	@Value("${application.message:null}")
+	private String message;
+	
+	// OSの環境変数から値を取得
+	// eclipseではなく、コマンドラインからappサーバを起動する必要あり
+	// .zshenv等を読み込むわけではない
+	@Value("${MESSAGE:null}")
+	private String envMessage;
+	
+	@Value("${savehist:null}")
+	private String saveHist;
 //	// Fieild Injection Sample
 	// Configrationで定義しているBeanがInjectionされる
 //	@Autowired
@@ -44,6 +57,10 @@ public class GreetingController extends BaseController {
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") String name) {
 		DiSample  diSample = newDiSample("aaaaa", 22222);
+		
+		
+		System.out.println(message);
+		System.out.println(envMessage);
 		
 		System.out.println("Bean定義場所:" + diSample.getName());
 		System.out.println("Bean 年齢" + diSample.getAge());

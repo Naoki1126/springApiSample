@@ -13,6 +13,7 @@ public class SpringApiSampleApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringApiSampleApplication.class, args);
 	}
+	
 
 	// SampleLogicにてBean定義するためコメントアウト
 //    @Bean
