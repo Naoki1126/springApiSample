@@ -44,10 +44,9 @@ public class SampleLogicTest {
 	// Beanの確認目的
 	@Test
 	public void case001() {
-
+		
 		String info = sampleLogic.getDiSampleInfomation();
 		System.out.println(info);
-
 		doReturn("Mockで取得した結果です。").when(diSample).getProfile();
 
 		String mockInfo = sampleLogic.getDiSampleInfomation();

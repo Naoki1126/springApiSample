@@ -7,13 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringApiSampleApplication {
 	
-	private final String NAME = "";
-	private final int AGE = 21;
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringApiSampleApplication.class, args);
 	}
-	
+    
 
 	// SampleLogicにてBean定義するためコメントアウト
 //    @Bean

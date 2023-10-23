@@ -1,2 +1,10 @@
 application:
-  message: Hello
+  messagespring: Hello
+testmessage: springのymlで定義したメッセージ
+spring:
+  jpa:
+    database: POSTGRESQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: ""
